@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="author" content="0x4rv1nd" />
+    <meta
+      name="description"
+      content="0x4rv1nd"
+    />
+    <meta
+      name="keywords"
+      content="0x4rv1nd"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ff3a5e" />
+    <meta name="copyright" content="0x4rv1nd" />
+    <meta http-equiv="content-language" content="pt-br" />
+    <meta property="og:title" content="0x4rv1nd" />
+    <meta property="og:description" content="0x4rv1nd" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/icons/console.png"
+      type="image/x-icon"
+    />
+    
+    <link rel="icon" href="assets/icons/console.png" />
+    <link rel="apple-touch-icon" href="assets/image/logo-page.svg" />
+    <link rel="canonical" href="https://github.com/0x4rv1nd" />
+    <script src="assets/js/svg-inject.min.js"></script>
+    <title>0x4rv1nd</title>
+  </head>
+
+  <body>
+    <style>
+
+      .black-card {
+          padding-top: 50%;
+          background-color: black;
+          color: rgb(118, 155, 155);
+          padding: 10px;
+          font-size: small;
+          z-index: 1000;
+          text-align: center;
+          background-color: rgb(0, 0, 0);
+      }
+
+  </style>
+    <div class="black-card">
+      <h1>‍</h1>
+      <h1>‍</h1>
+      <h2> ▼ </h2>
+      <h2>INFO ABOUT YOU </h2>
+      <p><strong>Don't worry, this will not be saved. I just want to inform you that all websites can access your information. To avoid this, turn off JavaScript in your browser.</strong></p>
+      <p><strong>IPv4 Address:</strong> <span id="ip_address"></span></p>
+      <p><strong>Device:</strong> <span id="deviceInfo"></span></p>
+      <p><strong>Screen Resolution:</strong> <span id="resolutionInfo"></span></p>
+      <p><strong>Country Name:</strong> <span id="country_name"></span></p>
+      <p><strong>ISP:</strong> <span id="isp"></span></p>
+      <p><strong>Latitude:</strong> <span id="latitude"></span></p>
+      <p><strong>Longitude:</strong> <span id="longitude"></span></p>
+      <h2> ▲ </h2>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <script>
+      function detectDevice() {
+          var userAgent = navigator.userAgent.toLowerCase();
+  
+          if (userAgent.includes("mobile")) {
+              return "Smartphone";
+          } else if (userAgent.includes("tablet")) {
+              return "Tablet";
+          } else {
+              return "Laptop or Desktop"; 
+          }
+      }
+  
+      $(document).ready(function () {
+          var deviceType = detectDevice();
+          document.getElementById("deviceInfo").textContent = deviceType;
+  
+          var screenWidth = window.screen.width;
+          var screenHeight = window.screen.height;
+          document.getElementById("resolutionInfo").textContent = screenWidth + "x" + screenHeight;
+  
+          $.getJSON("https://ipapi.co/json/", function (data) {
+              var ipAddress = data.ip;
+              var countryName = data.country_name;
+              var isp = data.org;
+              var latitude = data.latitude;
+              var longitude = data.longitude;
+
+              $("#ip_address").text(ipAddress);
+              $("#country_name").text(countryName);
+              $("#isp").text(isp);
+              $("#latitude").text(latitude);
+              $("#longitude").text(longitude);
+
+             
+                  });
+              });
+  </script>
+    <header>
+      <div class="grid-layout">
+        <nav>
+          <img
+            src="assets/icons/key.png"
+            alt="Logo 0x4rv1nd"
+            width="90px"
+            height="90px"
+          />
+          <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <ul class="nav-list">
+            <li><a href="#s-home">01. HOME</a></li>
+            <li><a href="#s-about">02. ABOUT</a></li>
+            <li>
+              <a href="#s-services">03. WHAT I DO</a>
+            </li>
+           
+            <li>
+              <a href="#s-skills">04. SKILLS</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="s-home">
+        <div class="grid-layout">
+          <div id="home">
+            <div id="home-container-text">
+              <h1 class="delayMediumReveal">
+                0x4rv1nd
+                <div class = "gg" title="404">I LOVE SOMEONE'S PRIVACY</div>
+              </h1>
+              <p class="typewriter">
+                I am a computer enthusiast from India. Building things to make lives better. 
+              </p>
+
+              <a
+                href="https://github.com/0x4rv1nd"
+                rel="noopener"
+                target="_blank"
+                class="delayExtraBigReveal"
+              >
+                Github
+              </a>
+            </div>
+
+            <img
+              src="assets/image/ded5.png"
+              alt="0x4rv1nd"
+              onload="SVGInject(this)"
+              id="logo"
+              width="600px"
+              height="600px"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="s-about">
+        <div class="grid-layout">
+          <div id="about">
+            <div id="about-photo">
+              <img
+                src="assets/image/ded6.png"
+                width="500px"
+                height="500px"
+                alt="0x4rv1nd"
+                class="delayMediumReveal"
+                id="0x4rv1nd"
+              />
+              <div class="about-figure figure-one icon-one delayExtraBigReveal">
+                <img
+                  src="assets/icons/web.png"
+                  width="45px"
+                  height="45px"
+                  alt="ícone html"
+                />
+              </div>
+              <div class="about-figure figure-two icon-two delayExtraBigReveal">
+                <img
+                  src="assets/icons/bitcoin.png"
+                  width="45px"
+                  height="45px"
+                  alt="ícone css"
+                />
+              </div>
+              <div
+                class="about-figure figure-three icon-three delayExtraBigReveal"
+              >
+                <img
+                  src="assets/icons/console1.png"
+                  width="45px"
+                  height="45px"
+                  alt="ícone javascript"
+                />
+              </div>
+            </div>
+            <article id="about-text">
+              <h2 class="delaySmallReveal"><span><</span>0x4rv1nd<span>></span></h2>
+              <p class="delayMediumReveal">
+                An average guy in the field of security building and breaking the softwares 
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+        
+      <section id="s-services">
+        <div class="grid-layout">
+          <h2 class="delaySmallReveal">What I do<span>.</span></h2>
+          <div id="services">
+            <article class="intervalCardReveal">
+              <div>
+                <img
+                  src="assets/icons/server.png"
+                  width="100px"
+                  height="100px"
+                  alt="0x4rv1nd"
+                />
+              </div>
+              <h3>A FullSatck Webdev</h3>
+              <p>
+                MERN Stack, Flutter
+              </p>
+            </article>
+             
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="s-skills">
+        <div class="grid-layout">
+          <div id="skills">
+            <article id="skills-text">
+              <h2 class="delaySmallReveal"><span><</span> language and tool | skills <span>></span></h2>
+              <p class="delayMediumReveal changeDescription">
+                languages / tools
+              </p>
+            </article>
+
+            <div id="skills-cards">
+              <article class="html intervalCardReveal">
+                <span class="skills-cards-name-high">Bash</span>
+                <img
+                  src="assets/icons/bash.png"
+                  width="60px"
+                  height="60px"
+                  alt="0x4rv1nd"
+                  class="skills-icons"
+                />
+              </article>
+              <article class="css intervalCardReveal">
+                <span class="skills-cards-name-high">Burpsuite</span>
+                <img
+                  src="assets/icons/burpsuite.png"
+                  width="60px"
+                  height="60px"
+                  alt="0x4rv1nd"
+                  class="skills-icons"
+                />
+              </article>
+              
+             
+              
+              <article class="styled intervalCardReveal">
+                <span class="skills-cards-name-low aumento-hover"
+                  >Ghidra</span
+                >
+                <img
+                  src="assets/icons/ghidra.png"
+                  width="60px"
+                  height="60px"
+                  alt="0x4rv1nd"
+                  class="skills-icons"
+                />
+              </article>
+              <article class="tailwind intervalCardReveal">
+                <span class="skills-cards-name-low">Python</span>
+                <img
+                  src="assets/icons/python.png"
+                  width="60px"
+                  height="60px"
+                  alt="0x4rv1nd"
+                  class="skills-icons"
+                />
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <div class="grid-layout">
+            <p id="direitos-autorais">© 2023 0x4rv1nd</p>
+            <div>
+              <p>Powered by</p>
+              <img
+                src="assets/icons/web.png"
+                alt="0x4rv1nd"
+                width="60px"
+                height="60px"
+              />
+            </div>
+          </div>
+        </footer>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+    
+  </body>
+</html>
