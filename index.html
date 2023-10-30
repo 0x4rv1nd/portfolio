@@ -1,17 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en-us">
   <head>
 
-    <meta charset="UTF-8" />
+   <meta charset="UTF-8" />
     <meta name="author" content="0x4rv1nd" />
-    <meta
-      name="description"
-      content="0x4rv1nd"
-    />
-    <meta
-      name="keywords"
-      content="0x4rv1nd"
-    />
+    <meta name="description" content="0x4rv1nd" />
+    <meta name="keywords" content="0x4rv1nd" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#ff3a5e" />
     <meta name="copyright" content="0x4rv1nd" />
@@ -20,39 +14,48 @@
     <meta property="og:description" content="0x4rv1nd" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link
-      rel="shortcut icon"
-      href="assets/icons/console.png"
-      type="image/x-icon"
-    />
-    
+    <link rel="shortcut icon" href="assets/icons/console.png" type="image/x-icon" />
     <link rel="icon" href="assets/icons/console.png" />
     <link rel="apple-touch-icon" href="assets/image/logo-page.svg" />
     <link rel="canonical" href="https://github.com/0x4rv1nd" />
     <script src="assets/js/svg-inject.min.js"></script>
     <title>0x4rv1nd</title>
-  </head>
 
-  <body>
     <style>
+        /* Common styles for both mobile and desktop */
+        .black-card {
+            padding-top: 50%;
+            background-color: black;
+            color: rgb(118, 155, 155);
+            padding: 10px;
+            font-size: small;
+            z-index: 1000;
+            text-align: center;
+            background-color: rgb(0, 0, 0);
+        }
 
-      .black-card {
-          padding-top: 50%;
-          background-color: black;
-          color: rgb(118, 155, 155);
-          padding: 10px;
-          font-size: small;
-          z-index: 1000;
-          text-align: center;
-          background-color: rgb(0, 0, 0);
-      }
+        /* Mobile View */
+        @media (max-width: 767px) {
+            /* Mobile-specific styles here */
+            .black-card {
+                /* Customize styles for mobile devices */
+                font-size: small; /* Example: Adjust font size for mobile */
+                padding: 5px; /* Example: Adjust padding for mobile */
+            }
+        }
 
+        /* Desktop View */
+        @media (min-width: 768px) {
+            /* Desktop-specific styles here */
+            .black-card {
+                /* Customize styles for desktop devices */
+                font-size: medium; /* Example: Adjust font size for desktop */
+                padding: 20px; /* Example: Adjust padding for desktop */
+            }
+        }
   </style>
     <div class="black-card">
       <h1>‍</h1>
